@@ -19,6 +19,7 @@ DIST_SUBDIRS = Base Constraints GSS Newton PDS Utils UserInterface
 lib_LTLIBRARIES = @top_builddir@/lib/libopt.la
 @top_builddir@_lib_libopt_la_SOURCES = globals.C
 @top_builddir@_lib_libopt_la_LIBADD = $(SUBLIBS)
+@top_builddir@_lib_libopt_la_LDFLAGS = -no-undefined
 
 # Provide location of additional include files.
 

@@ -24,6 +24,8 @@ lib_LTLIBRARIES = @top_builddir@/lib/libnewmat.la
 					myexcept.C	newmatex.C \
 					newfft.C
 
+@top_builddir@_lib_libnewmat_la_LDFLAGS = -no-undefined
+
 # Additional files to be included in the distribution.
 
 EXTRA_DIST = newmat9.C newmatnl.C solution.C example.cpp garch.cpp   \
