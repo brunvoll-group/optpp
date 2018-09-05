@@ -20,6 +20,10 @@ if HAVE_MPI
 libpds_la_SOURCES += pdsglb.c pdsgop.c pdswap.c
 endif
 
+if HAVE_BLAS
+libpds_la_LIBADD = $(BLAS_LIBS)
+endif
+
 # Provide location of additional include files.
 
 INCLUDES = -I$(top_srcdir)/newmat11 -I$(top_srcdir)/include

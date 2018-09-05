@@ -13,6 +13,8 @@ if !HAVE_BLAS
 libutils_la_SOURCES += linalg.c
 endif
 
+libutils_la_LIBADD = @top_builddir@/lib/libnewmat.la
+
 # Provide location of additional include files.
 
 INCLUDES = -I$(top_srcdir)/newmat11 -I$(top_srcdir)/include
