@@ -9,13 +9,16 @@
 #include <cstdlib>
 #endif
 
+#ifdef _STANDARD_                 // standard library available
+#include <limits>
+#endif
+
 #ifdef use_namespace
 namespace NEWMAT {
 #endif
 
 #ifdef _STANDARD_                 // standard library available
 
-#include<limits>
 using namespace std;
 	
 class FloatingPointPrecision
