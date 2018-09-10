@@ -39,6 +39,10 @@
 #ifndef EXCEPTION_LIB
 #define EXCEPTION_LIB
 
+#ifdef SimulateExceptions
+#include <setjmp.h>
+#endif
+
 #ifdef use_namespace
 namespace RBD_COMMON {
 #endif
@@ -95,7 +99,6 @@ inline void Tracer::ReName(const char* e) { entry=e; }
 
 #ifdef SimulateExceptions                // SimulateExceptions
 
-#include <setjmp.h>
 
 
 //************* the definitions of Try, Throw and Catch *****************//
