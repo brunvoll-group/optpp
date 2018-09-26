@@ -1,0 +1,14 @@
+language: cpp
+sudo: false
+
+matrix:
+  include:
+    - os: linux
+    - os: osx
+
+script:
+  - autoreconf -i
+  - ./configure --prefix=${HOME}/.local ac_cv_f77_mangling="lower case, underscore, no extra underscore"
+  - make -j2
+  - make install
+  - make check -j2
