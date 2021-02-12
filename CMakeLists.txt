@@ -17,10 +17,20 @@ message (STATUS "OptPP version ${OPTPP_VERSION_STRING}")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
-option (BUILD_SHARED_LIBS "Build OptPP as a shared library" ON)
-option (OPTPP_TESTS "build unit tests" ON)
+option (BUILD_SHARED_LIBS "Build OptPP as a shared library" OFF)
+option (OPTPP_TESTS "build unit tests" OFF)
+option (BUILD_32 "build for 32 bit arch" OFF)
 
 include (GNUInstallDirs)
+
+
+
+if(BUILD_32)
+	add_compile_options(-m32)
+	set (CMAKE_INSTALL_BINDIR "/usr/local/lib/")
+endif()
+
+set (CMAKE_INSTALL_INCLUDEDIR "/usr/local/include/optpp_newmat")
 
 # Offer the user the choice of overriding the installation directories
 set (INSTALL_LIB_DIR     ${CMAKE_INSTALL_LIBDIR}        CACHE PATH "Installation directory for libraries")

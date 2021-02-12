@@ -216,3 +216,32 @@ include complete information about your system (the output from the
 command "uname -a" and the compiler/version), the exact error messages
 generated, and any output produced.  If possible, a small piece of
 code that generates the bug would be most helpful.
+
+
+
+
+
+----------------------------------------------------------------------------
+
+----------------------------   BRUNVOLL   ----------------------------------
+
+----------------------------------------------------------------------------
+
+Build 64bit for BruCon5:
+cd optpp
+mkdir build64
+cd build64
+cmake ..
+sudo make install
+
+
+
+Build 32bit for BruCon4:
+cd optpp
+mkdir build32
+cd build32
+CXX=g++-4.9.4  cmake -DBUILD_32=ON ..
+sudo make install
+
+
+
