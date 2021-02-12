@@ -19,6 +19,10 @@ extern "C" {
   double get_wall_clock_time();
 }
 
+class brunvollTemplate{};
+
+
+
 namespace OPTPP {
 
 typedef void (*INITFCN)(int, NEWMAT::ColumnVector&);
@@ -159,7 +163,7 @@ private:
 
 /**
  * NLF1 is a derived class of NLP1, a nonlinear problem with analytic
- * first derivatives.  The NLF1 class implements function, 
+ * first derivatives.  The NLF1 class implements function,
  * gradient, and Hessian evaluators.
  *
  * @author J. C. Meza, Sandia National Laboratories, meza@ca.sandia.gov
@@ -321,6 +325,8 @@ public:
   // Destructor
   virtual ~NLF2() {;}                     
 
+
+  brunvollTemplate* testTemplate;
 
   /// Reset parameter values 
   virtual void reset(); 			
