@@ -26,8 +26,8 @@ include (GNUInstallDirs)
 
 
 if(BUILD_32)
-	add_compile_options(-m32)
-	set (CMAKE_INSTALL_BINDIR "/usr/local/lib/")
+  add_compile_options(-m32)
+  set (CMAKE_INSTALL_LIBDIR "/usr/local/lib/")
 endif()
 
 set (CMAKE_INSTALL_INCLUDEDIR "/usr/local/include/optpp_newmat")
